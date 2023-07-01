@@ -20,9 +20,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-service \
-    android.hardware.boot@1.2-mtkimpl \
-    android.hardware.boot@1.2-mtkimpl.recovery
+    android.hardware.boot@1.1-service \
+    android.hardware.boot@1.1-mtkimpl \
+    android.hardware.boot@1.1-mtkimpl.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctrl \
@@ -40,7 +40,7 @@ PRODUCT_PACKAGES += \
     update_engine_sideload
 
 # VNDK
-PRODUCT_TARGET_VNDK_VERSION := 31
+PRODUCT_TARGET_VNDK_VERSION := 30
 
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
@@ -56,12 +56,10 @@ PRODUCT_PACKAGES += \
 # Additional Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
-    libkeymaster41 \
     libpuresoftkeymasterdevice
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
 # MTK PlPath Utils
