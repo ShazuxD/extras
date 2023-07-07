@@ -6,7 +6,6 @@
 /vbmeta		          emmc	      /dev/block/platform/bootdevice/by-name/vbmeta	     flags=slotselect;display="VBMeta";backup=1;flashimg=1
 
 ## Firmware
-/misc                     emmc        /dev/block/platform/bootdevice/by-name/misc
 /logo	                  emmc	      /dev/block/platform/bootdevice/by-name/logo	     flags=slotselect;backup=1
 /audio_dsp                emmc        /dev/block/platform/bootdevice/by-name/audio_dsp       flags=display=audio_dsp
 /dtbo			  emmc	      /dev/block/platform/bootdevice/by-name/dtbo	     flags=slotselect;display="DTBO";backup=1;flashimg=1
