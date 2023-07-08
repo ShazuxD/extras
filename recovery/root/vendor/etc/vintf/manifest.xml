@@ -697,6 +697,10 @@
         </interface>
         <fqname>@1.0::ITouchFeature/default</fqname>
     </hal>
+    <hal format="aidl">
+        <name>android.hardware.vibrator</name>
+        <fqname>IVibrator/default</fqname>
+    </hal>
     <sepolicy>
         <version>30.0</version>
     </sepolicy>

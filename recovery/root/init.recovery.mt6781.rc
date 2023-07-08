@@ -44,6 +44,12 @@ service keystore /system/bin/keystore /tmp/misc/keystore
     disabled
     seclabel u:r:recovery:s0
 
+service vibrator-fleur /system/bin/hw/android.hardware.vibrator-service.fleur
+    user root
+    group root
+    class hal
+    seclabel u:r:recovery:s0
+
 service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
     interface android.hardware.gatekeeper@1.0::IGatekeeper default
     user root
@@ -81,3 +87,4 @@ on property:twrp.all.users.decrypted=true
 on boot
     start boot-hal-1-1
     start health-hal-2-1
+    start vibrator-fleur
