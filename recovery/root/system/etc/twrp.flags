@@ -14,13 +14,9 @@
 /vbmeta_system            emmc        /dev/block/platform/bootdevice/by-name/vbmeta_system   flags=display=vbmeta_system;slotselect
 
 ## Logical Partitions
-/system_image_a    emmc       /dev/block/bootdevice/by-name/system_a                  flags=backup=1;display="System Image";flashimg=1
-/vendor_image_a   emmc       /dev/block/bootdevice/by-name/vendor_a                  flags=backup=1;display="Vendor Image";flashimg=1
-/product_image_a  emmc       /dev/block/bootdevice/by-name/product_a                 flags=backup=1;display="Product Image";flashimg=1
-
-/system_image_b     emmc       /dev/block/bootdevice/by-name/system_b                  flags=backup=1;display="System Image";flashimg=1
-/vendor_image_b    emmc       /dev/block/bootdevice/by-name/vendor_b                  flags=backup=1;display="Vendor Image";flashimg=1
-/product_image_b   emmc       /dev/block/bootdevice/by-name/product_b                 flags=backup=1;display="Product Image";flashimg=1
+/system_image             emmc       /dev/block/dm-3                  flags=backup=1;display="System Image";flashimg=1
+/vendor_image             emmc       /dev/block/dm-4                  flags=backup=1;display="Vendor Image";flashimg=1
+/product_image            emmc       /dev/block/dm-2                 flags=backup=1;display="Product Image";flashimg=1
 
 ## Sensitive data
 /persist		  ext4	      /dev/block/platform/bootdevice/by-name/persist 	     flags=display="Persist";fsflags=ro
